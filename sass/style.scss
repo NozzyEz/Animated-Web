@@ -1,0 +1,45 @@
+// Variables
+$header1: 4rem;
+$header2: 6rem;
+$header3: 4.5rem;
+$header4: 4rem;
+$paragraph: 2rem;
+$fashion-text: 2.5rem;
+$explore: 1.8rem;
+
+// Colors
+$primary-color: #1e1f22;
+$secondary-color: rgb(226, 225, 225);
+$accent-color: #000000;
+$btn-color: #000000;
+$link-color: #000000;
+$text-color1: rgb(86, 124, 228);
+$text-color2: rgb(139, 209, 34);
+$text-color3: rgb(255, 139, 93);
+$text-color4: rgb(100, 73, 209);
+
+// Fonts
+@font-face {
+  font-family: 'Abril Fatface';
+  src: url(../fonts/AbrilFatface-Regular.ttf);
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+// Mixins
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Imports
+@import 'global';
+@import 'header';
+@import 'main';
+@import 'nav';
+@import 'fashion';
+@import 'mobile';

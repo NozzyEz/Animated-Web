@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  background: $primary-color;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  cursor: none !important;
+  &.hide {
+    overflow: hidden;
+  }
+}
+
+main {
+  position: absolute;
+}
+
+h1 {
+  font-size: $header1;
+}
+h2 {
+  font-size: $header2;
+}
+h3 {
+  font-size: $header3;
+}
+h4 {
+  font-size: $header4;
+}
+
+p {
+  font-size: $paragraph;
+}
+
+a {
+  text-decoration: none;
+  font-size: $explore;
+  cursor: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: $secondary-color;
+}
+
+.cursor {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid $secondary-color;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  transition-property: background, color, transform;
+  transform-origin: 87.5% 87.5%;
+  @include flex(center, center, row);
+  z-index: 1;
+  &.nav-active {
+    transform: scale(2.5);
+    background: $text-color1;
+  }
+  &.exp-active {
+    transform: scale(2.5);
+    background: $secondary-color;
+    color: $primary-color;
+  }
+  &.burger-active {
+    border: 2px solid $primary-color;
+    // background: $primary-color;
+  }
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+.footer {
+  min-height: 10vh;
+  width: 100%;
+}
